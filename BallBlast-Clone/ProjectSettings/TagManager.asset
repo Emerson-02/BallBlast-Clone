@@ -6,15 +6,17 @@ TagManager:
   tags:
   - Bullet
   - Ground
+  - Jewel
+  - Coin
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Jewel
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Coin
   - 
   - 
   - 
@@ -42,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Jewels
+    uniqueID: 2553083243
     locked: 0
