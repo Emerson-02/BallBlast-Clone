@@ -40,7 +40,7 @@ public class CannonScript : MonoBehaviour
         screenLeftLimit = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z)).x;
         screenRightLimit = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, transform.position.z)).x;
 
-        // Calcular a metade da largura do canhão
+        // largura do canhão
         halfCannonWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
     }
 

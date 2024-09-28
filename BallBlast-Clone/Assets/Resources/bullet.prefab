@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1794474650367116230}
   - component: {fileID: 4006654063111902982}
   - component: {fileID: 5600993839116792036}
+  - component: {fileID: 1906881535181774026}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 5f44179b7dd45a44aa14823227ad4e62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,3 +165,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1906881535181774026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614575056482699477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3d084b8d1ebec4cbd55440b6551380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -34,7 +34,6 @@ public class MusicManager : MonoBehaviour
             audioSource.Play();
             Debug.Log("Música está tocando.");
 
-            // aumentar o volume da música para o máximo
             audioSource.volume = 1.0f;
         }
         else

@@ -51,8 +51,6 @@ public class Jewel : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            //other.GetComponent<PlayerStats>().jewels += jewelValue;
-
             TakeDamage(playerStats.damage);
 
             Destroy(other.gameObject);
@@ -66,7 +64,7 @@ public class Jewel : MonoBehaviour
 
         if (jewelValue <= 0)
         {
-            // verifica a escala da joia na lista de escalas
+            // Verifica a escala da joia na lista de escalas
             int index = jewelSpawner.scales.IndexOf(transform.localScale);
 
             GameObject coinPrefab = Resources.Load<GameObject>("Coin");
@@ -76,7 +74,7 @@ public class Jewel : MonoBehaviour
                 SpawnMinorJewels(index, originalValue / 2, transform.position, 1);
                 SpawnMinorJewels(index, originalValue / 2, transform.position, -1);
 
-                // instancia index moedas a partir da posição da joia
+                // Instancia index moedas a partir da posição da joia
                 for (int i = 0; i < index; i++)
                 {
                     GameObject newCoin = Instantiate(coinPrefab, gameObject.transform.position, Quaternion.identity);
@@ -89,7 +87,7 @@ public class Jewel : MonoBehaviour
             }
             else
             {
-                // instancia uma moeda a partir da posição da joia
+                // Instancia uma moeda a partir da posição da joia
                 GameObject newCoin = Instantiate(coinPrefab, transform.position, Quaternion.identity);
                 gameController.levelJewelsCount--;
 
