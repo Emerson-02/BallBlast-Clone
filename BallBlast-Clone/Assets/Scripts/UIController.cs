@@ -92,7 +92,7 @@ public class UIController : MonoBehaviour
 
             playerStats.upgradeCount++;
 
-            // salva as estatísticas do jogador
+            // salva o upgradeCount
             playerStats.SavePlayerStats();
 
             // Atualiza a interatividade do botão

@@ -17,7 +17,32 @@ public class PlayerStats : MonoBehaviour
 
     public void Start()
     {
-        LoadPlayerStats();
+        //LoadPlayerStats();
+
+        // Verifica se é a primeira vez que a cena "level-1" é aberta
+        if (!PlayerPrefs.HasKey("Level1Initialized"))
+        {
+            // Define os valores padrão
+            bulletInterval = 0.5f;
+            bulletsPerShot = 1;
+            bulletSpeed = 10f;
+            damage = 1;
+            coins = 0;
+            upgradePrice = 3;
+            upgradeCount = 0;
+
+            // Salva os valores padrão
+            SavePlayerStats();
+
+            // Marca que a cena "level-1" foi inicializada
+            PlayerPrefs.SetInt("Level1Initialized", 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            // Carrega os valores salvos
+            LoadPlayerStats();
+        }
     }
 
     public void SavePlayerStats()
@@ -116,6 +141,17 @@ public class PlayerStats : MonoBehaviour
 
     public void OnApplicationQuit() 
     {
-        PlayerPrefs.DeleteAll();
+        // Excluir cada chave individualmente
+        PlayerPrefs.DeleteKey("BulletInterval");
+        PlayerPrefs.DeleteKey("BulletsPerShot");
+        PlayerPrefs.DeleteKey("BulletSpeed");
+        PlayerPrefs.DeleteKey("Damage");
+        PlayerPrefs.DeleteKey("Coins");
+        PlayerPrefs.DeleteKey("PlayerLevel");
+        PlayerPrefs.DeleteKey("UpgradeCount");
+        PlayerPrefs.DeleteKey("Level1Initialized");
+
+        // Salvar as alterações
+        PlayerPrefs.Save();
     }
 }
